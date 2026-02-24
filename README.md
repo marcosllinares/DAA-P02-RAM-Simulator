@@ -21,15 +21,7 @@ si no se ejecuta con la misma versión que la especificada en `DAA-RAM-simulator
 
 En ese caso cambiar la versión de .NET Core en `DAA-RAM-simulator.csproj` a: `<TargetFramework>net9.0</TargetFramework>`.
 
-##### Ejecución normal del programa. Rama `version1`
+#### Ejecución
 
 - Formato de Ejecución: `dotnet run <archivo de programa> <archivo de entrada> <archivo de salida>`.
 - Ejemplo:          `dotnet run data/Ejemplos_RAM/test1.ram data/input.txt data/output.txt`.
-
-##### Ejecución del programa con ampliación. Rama `main`
-
-- Formato de Ejecución: `dotnet run <archivo de programa> <archivo de entrada> <archivo de salida>`.
-
-Además de lo anterior se pregunta por terminal al usuario que tipo de registro quiere utilizar:
-
-- `¿Desea utilizar registros vectoriales (s/n)?`
