@@ -16,6 +16,8 @@ Autores:
 
 ##### Consideraciones generales
 
+La extensión no fue implementada.
+
 Dependiendo de la versión de .NET Core, el comando `dotnet run` puede no funcionar correctamente
 si no se ejecuta con la misma versión que la especificada en `DAA-RAM-simulator.csproj`.
 
