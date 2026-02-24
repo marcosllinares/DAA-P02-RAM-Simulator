@@ -1,0 +1,127 @@
+# Inicializar R0 con 0
+                load =0
+# Inicializar contador de elementos en R2
+                store 2
+
+# Leer un número de la cinta de entrada y almacenarlo en R3
+cargar_vector:  read 3
+# Cargar el número leído en R0
+                load 3
+# Si el número es 0, terminar la carga y comenzar el ordenamiento
+                jzero comienzo
+# Almacenar el número leído en el vector, en la posición indicada por R2
+                store R1[2]
+# Cargar el contador de elementos en R0
+                load 2
+# Incrementar el contador
+                add =1
+# Almacenar el contador actualizado
+                store 2
+# Repetir el proceso de carga
+                jump cargar_vector
+
+# Cargar el contador de elementos en R0
+comienzo:        load 2
+# Si el contador es 0, ir al fin (vector vacío)
+                 jzero fin
+# Inicializar R0 con 0 para uso en el bucle for
+                 load =0
+# Inicializar el índice j del bucle for en R3
+                 store 3
+
+# Cargar el índice j
+for:             load 3
+# Incrementar j
+                 add =1
+# Almacenar j actualizado
+                 store 3
+# Cargar el contador de elementos
+                 load 2
+# Comparar contador con j
+                 sub 3
+# Si j alcanza el contador, terminar el bucle for
+                 jzero end
+# Cargar el elemento en la posición j
+                 load R1[3]
+# Almacenar el elemento actual en R4 (key)
+                 store 4
+# Cargar j nuevamente
+                 load 3
+# Calcular j-1 para iniciar la búsqueda de la posición de inserción
+                 sub =1
+# Almacenar j-1 en R5 (i)
+                 store 5
+
+# Cargar i
+condicion_while: load 5
+# Ajustar i para la condición del bucle while
+                 add =1
+# Si i es 0, finalizar el bucle while
+                 jzero fin_while
+# Cargar key
+                 load 4
+# Comparar key con A[i]
+                 sub R1[5]
+# Si key > A[i], finalizar el bucle while
+                 jgtz fin_while
+
+# Cargar i
+while:           load 5
+# Calcular i+1
+                 add =1
+# Almacenar i+1 en R6
+                 store 6
+# Cargar A[i]
+                 load R1[5]
+# Almacenar A[i] en A[i+1]
+                 store R1[6]
+# Cargar i nuevamente
+                 load 5
+# Decrementar i
+                 sub =1
+# Almacenar i actualizado
+                 store 5
+# Repetir la condición del bucle while
+                 jump condicion_while
+
+# Cargar i
+fin_while:       load 5
+# Calcular i+1
+                 add =1
+# Almacenar i+1 en R6
+                 store 6
+# Cargar key
+                 load 4
+# Insertar key en A[i+1]
+                 store R1[6]
+# Volver al inicio del bucle for
+                 jump for
+
+# Inicializar R0 con 0 para uso en el bucle de impresión
+end:             load =0
+# Inicializar el índice de impresión en R7
+                 store 7
+
+# Cargar el contador de elementos
+imprimir_vector:  load 2
+# Comparar contador con el índice de impresión
+                 sub 7
+# Si se han impreso todos los elementos, terminar
+                 jzero fin
+# Cargar el elemento a imprimir
+                 load R1[7]
+# Almacenar el elemento en R10
+                 store 10
+# Escribir el elemento en la cinta de salida
+                 write 10
+# Cargar el índice de impresión
+                 load 7
+# Incrementar el índice de impresión
+                 add =1
+# Almacenar el índice de impresión actualizado
+                 store 7
+# Repetir el bucle de impresión
+                 jump imprimir_vector
+
+# Finalizar el programa
+fin:             halt

@@ -1,0 +1,6 @@
+READ 2[0]
+LOAD 2[0]
+MUL =2
+STORE 3[0]
+WRITE 3[0]
+HALT

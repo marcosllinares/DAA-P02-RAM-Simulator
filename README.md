@@ -12,18 +12,14 @@ Curso: 3º
 
 Autores:
   - Marcos Llinares Montes. alu0100972443@ull.edu.es
-  - Diego Antonio Pi Artiaga. alu0101493084@ull.edu.es
+  - Gerard Caramazza Vilá.  alu0101229775@ull.edu.es
 
 ##### Consideraciones generales
 
 Dependiendo de la versión de .NET Core, el comando `dotnet run` puede no funcionar correctamente
 si no se ejecuta con la misma versión que la especificada en `DAA-RAM-simulator.csproj`.
 
-En ese caso cambiar la versión de .NET Core en `DAA-RAM-simulator.csproj` a: `<TargetFramework>net9.0</TargetFramework>`
-
-- Ramas:
-  - `version1`: Versión completamente implementada de la RAM **sin la modificación**.
-  - `main`: Versión implementada de la RAM **con la ampliación** correspondiente a registros vectoriales.
+En ese caso cambiar la versión de .NET Core en `DAA-RAM-simulator.csproj` a: `<TargetFramework>net9.0</TargetFramework>`.
 
 ##### Ejecución normal del programa. Rama `version1`
 
@@ -36,4 +32,4 @@ En ese caso cambiar la versión de .NET Core en `DAA-RAM-simulator.csproj` a: `<
 
 Además de lo anterior se pregunta por terminal al usuario que tipo de registro quiere utilizar:
 
-- `¿Desea utilizar registros vectoriales (s/n)?` 
+- `¿Desea utilizar registros vectoriales (s/n)?`
