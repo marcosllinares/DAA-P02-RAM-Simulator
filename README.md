@@ -23,5 +23,6 @@ En ese caso cambiar la versión de .NET Core en `DAA-RAM-simulator.csproj` a: `<
 
 #### Ejecución
 
+- Build: `dotnet buildotnet run data/Ejemplos_RAM/test1.ram data/input.txt data/output.txtd`
 - Formato de Ejecución: `dotnet run <archivo de programa> <archivo de entrada> <archivo de salida>`.
 - Ejemplo:          `dotnet run data/Ejemplos_RAM/test1.ram data/input.txt data/output.txt`.
