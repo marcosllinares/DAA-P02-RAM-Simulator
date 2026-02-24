@@ -6,7 +6,7 @@ Asignatura: Diseño y Análisis de Algoritmos
 Curso: 3º
 Autores:
   - Marcos Llinares Montes. alu0100972443@ull.edu.es
-  - Diego Antonio Pi Artiaga. alu0101493084@ull.edu.es
+  - Gerard Caramazza Vila. alu0101229775@ull.edu.es
 
 Dependiendo de la versión de .NET Core, el comando 'dotnet run' puede no funcionar correctamente
 si no se ejecuta con la misma versión que la especificada en DAA-RAM-simulator.csproj.
