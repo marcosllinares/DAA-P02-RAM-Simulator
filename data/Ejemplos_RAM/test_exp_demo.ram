@@ -1,0 +1,36 @@
+# Programa de demostración para EXP según especificación
+# Ejemplo: Si R0 = 2 y R1 = 3, entonces EXP 1 guarda R0 = 2^3 = 8
+# También prueba con direccionamiento indirecto
+
+# TEST 1: Directo
+# Cargar 3 en R1
+LOAD =3
+STORE 1
+
+# Cargar 2 en R0
+LOAD =2
+
+# EXP 1: R0 = R0^R1 = 2^3 = 8
+EXP 1
+
+# Escribir resultado
+STORE 2
+WRITE 2
+
+# TEST 2: Con valor inmediato
+# R0 = 2^5 = 32
+LOAD =2
+EXP =5
+STORE 3
+WRITE 3
+
+# TEST 3: Con indirección
+# R4 = 4 (exponente), R5 = 3 (base)
+LOAD =4
+STORE 4
+LOAD =3
+EXP *4
+STORE 5
+WRITE 5
+
+HALT

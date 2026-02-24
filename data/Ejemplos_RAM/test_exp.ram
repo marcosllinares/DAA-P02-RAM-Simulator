@@ -1,0 +1,19 @@
+# Programa de prueba para el operador EXP
+# Calcula 2^3 = 8
+# R0 = 2, R1 = 3, resultado en R0 = 8
+
+# Cargar 3 en R1
+LOAD =3
+STORE 1
+
+# Cargar 2 en R0
+LOAD =2
+
+# Calcular R0 = R0^R1 (2^3 = 8)
+EXP 1
+
+# Guardar resultado en R2 y escribir
+STORE 2
+WRITE 2
+
+HALT

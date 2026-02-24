@@ -33,6 +33,8 @@ namespace DAA_RAM_simulator.src {
           return new Mul();
         case "DIV":
           return new Div();
+        case "EXP":
+          return new Exp();
         case "JUMP":
           return new Jump();
         case "JZERO":
@@ -78,7 +80,7 @@ namespace DAA_RAM_simulator.src {
          ((operand[0] == '*' || int.TryParse(operand, out auxiliar)) &&
           (operator1 == "JUMP" || operator1 == "JZERO" || operator1 == "JGTZ" || operator1 == "HALT")) ||
          ((operand[0] == '=') && operator1 != "LOAD" && operator1 != "ADD" &&
-           operator1 != "SUB" && operator1 != "MUL" && operator1 != "DIV" && operator1 != "WRITE") ||
+           operator1 != "SUB" && operator1 != "MUL" && operator1 != "DIV" && operator1 != "EXP" && operator1 != "WRITE") ||
          ((operator1 == "READ" || operator1 == "WRITE") && (operand == "0"))) {
         throw new Exception($"El operador {operator1} no puede tener el operando {operand}.");
       }
